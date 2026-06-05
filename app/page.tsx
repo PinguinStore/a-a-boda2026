@@ -1,65 +1,344 @@
-import Image from "next/image";
+'use client'
+
+import { useEffect, useState } from 'react'
+import { supabase } from '@/src/lib/supabase'
 
 export default function Home() {
+
+  const images = [
+    '/imagenes/foto1.png',
+    '/imagenes/foto2.png',
+    '/imagenes/foto3.png',
+    '/imagenes/foto4.png',
+    '/imagenes/foto5.png',
+    '/imagenes/foto6.png',
+    '/imagenes/foto7.png'
+  ]
+
+  const weddingDate = new Date('2026-08-01T14:30:00')
+
+  const [currentImage, setCurrentImage] = useState(0)
+  const [timeLeft, setTimeLeft] = useState('')
+
+  const [showConfirm, setShowConfirm] = useState(false)
+
+  const [guests, setGuests] = useState<any[]>([])
+
+  const [selectedGuest, setSelectedGuest] =
+    useState<any>(null)
+
+  useEffect(() => {
+
+    loadGuests()
+
+  }, [])
+
+  const loadGuests = async () => {
+
+    const { data, error } = await supabase
+      .from('invitados')
+      .select('*')
+      .order('nombre')
+
+    if (error) {
+
+      console.error(error)
+      return
+
+    }
+
+    setGuests(data || [])
+
+  }
+
+  const confirmAttendance = async (
+    attendance: boolean
+  ) => {
+
+    if (!selectedGuest) return
+
+    const { error } = await supabase
+      .from('invitados')
+      .update({
+        asistira: attendance,
+        fecha_confirmacion:
+          new Date().toISOString()
+      })
+      .eq(
+        'identificación',
+        selectedGuest.identificación
+      )
+
+    if (error) {
+
+      alert('Error al confirmar')
+      console.error(error)
+      return
+
+    }
+
+    alert('Confirmación registrada')
+
+    setShowConfirm(false)
+
+    loadGuests()
+
+  }
+
+  useEffect(() => {
+
+    const audio = new Audio('/music/music.mp3')
+
+    audio.loop = true
+
+    const playMusic = () => {
+
+      audio.play().catch(() => {})
+
+      document.removeEventListener(
+        'click',
+        playMusic
+      )
+
+    }
+
+    document.addEventListener(
+      'click',
+      playMusic
+    )
+
+    return () => {
+
+      audio.pause()
+
+    }
+
+  }, [])
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+
+      setCurrentImage(prev =>
+        prev === images.length - 1
+          ? 0
+          : prev + 1
+      )
+
+    }, 4000)
+
+    return () => clearInterval(interval)
+
+  }, [])
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+
+      const now = new Date().getTime()
+
+      const distance =
+        weddingDate.getTime() - now
+
+      if (distance <= 0) {
+
+        setTimeLeft(
+          '¡Ya llegó el gran día!'
+        )
+
+        return
+
+      }
+
+      const days = Math.floor(
+        distance /
+        (1000 * 60 * 60 * 24)
+      )
+
+      const hours = Math.floor(
+        (
+          distance %
+          (1000 * 60 * 60 * 24)
+        ) /
+        (1000 * 60 * 60)
+      )
+
+      const minutes = Math.floor(
+        (
+          distance %
+          (1000 * 60 * 60)
+        ) /
+        (1000 * 60)
+      )
+
+      const seconds = Math.floor(
+        (
+          distance %
+          (1000 * 60)
+        ) /
+        1000
+      )
+
+      setTimeLeft(
+        `${days} días ${hours}h ${minutes}m ${seconds}s`
+      )
+
+    }, 1000)
+
+    return () => clearInterval(interval)
+
+  }, [])
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+
+    <main className='min-h-screen bg-[#D6D0BC] text-[#040B40]'>
+
+      {/* Tu contenido existente */}
+
+      <button
+        onClick={() =>
+          setShowConfirm(true)
+        }
+        className='fixed bottom-6 right-6 bg-[#040B40] text-white px-8 py-4 rounded-full shadow-2xl animate-bounce'
+      >
+        Confirmar Asistencia
+      </button>
+
+      {
+        showConfirm && (
+
+          <div className='fixed inset-0 bg-black/70 flex items-center justify-center z-50'>
+
+            <div className='bg-white p-8 rounded-3xl w-[95%] max-w-lg'>
+
+              <h2 className='text-3xl font-bold text-center mb-6'>
+
+                Confirmación de Asistencia
+
+              </h2>
+
+              <select
+                className='w-full border p-4 rounded-2xl'
+                onChange={(e) => {
+
+                  const guest =
+                    guests.find(
+                      guest =>
+                        guest.identificación ===
+                        Number(
+                          e.target.value
+                        )
+                    )
+
+                  setSelectedGuest(
+                    guest
+                  )
+
+                }}
+              >
+
+                <option value=''>
+                  Seleccione su nombre
+                </option>
+
+                {
+                  guests.map(
+                    (guest) => (
+
+                      <option
+                        key={
+                          guest.identificación
+                        }
+                        value={
+                          guest.identificación
+                        }
+                      >
+
+                        {guest.nombre}
+
+                      </option>
+
+                    )
+                  )
+                }
+
+              </select>
+
+              {
+                selectedGuest && (
+
+                  <div className='mt-8'>
+
+                    <p className='text-center'>
+
+                      Invitaciones asignadas
+
+                    </p>
+
+                    <h3 className='text-center text-5xl font-black mt-3'>
+
+                      {
+                        selectedGuest.cantidad_invitados
+                      }
+
+                    </h3>
+
+                    <div className='grid grid-cols-2 gap-4 mt-8'>
+
+                      <button
+                        onClick={() =>
+                          confirmAttendance(
+                            true
+                          )
+                        }
+                        className='bg-green-600 text-white p-4 rounded-2xl'
+                      >
+
+                        Sí asistiré
+
+                      </button>
+
+                      <button
+                        onClick={() =>
+                          confirmAttendance(
+                            false
+                          )
+                        }
+                        className='bg-red-600 text-white p-4 rounded-2xl'
+                      >
+
+                        No asistiré
+
+                      </button>
+
+                    </div>
+
+                  </div>
+
+                )
+              }
+
+              <button
+                onClick={() =>
+                  setShowConfirm(
+                    false
+                  )
+                }
+                className='w-full mt-6 bg-slate-200 p-3 rounded-xl'
+              >
+
+                Cerrar
+
+              </button>
+
+            </div>
+
+          </div>
+
+        )
+      }
+
+    </main>
+
+  )
 }
