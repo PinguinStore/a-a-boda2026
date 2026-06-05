@@ -1,10 +1,8 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl =
-  process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseUrl =https://dxazxsbuzeqilgsodvxh.supabase.co
 
-const supabaseKey =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+const supabaseKey =sb_publishable_rVBL0VZr5O-e9u-Ch6TQPA_qDRGZSpJ
 
 console.log('URL:', supabaseUrl)
 console.log('KEY:', supabaseKey)
