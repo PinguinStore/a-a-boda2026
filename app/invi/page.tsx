@@ -241,7 +241,7 @@ async function confirmAttendance(attendance: boolean) {
   absolute
   left-0
   bottom-0
-  w-72
+  w-22
   z-10
   "
 />
@@ -252,7 +252,7 @@ async function confirmAttendance(attendance: boolean) {
   absolute
   right-0
   bottom-0
-  w-72
+  w-22
   z-10
   "
 />
