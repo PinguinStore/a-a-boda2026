@@ -718,7 +718,7 @@ className="rounded-xl mt-4"
 
   {/* DECORACIONES */}
   <img
-    src="/decoracion/hojas-izquierda.png"
+    src="/decoracion/flor-izquierda.png"
     className="
     absolute
     left-0
@@ -730,7 +730,7 @@ className="rounded-xl mt-4"
   />
 
   <img
-    src="/decoracion/hojas-derecha.png"
+    src="/decoracion/flor-derecha.png"
     className="
     absolute
     right-0
@@ -810,12 +810,10 @@ className="rounded-xl mt-4"
   </div>
 {/* FOTOS */}
   <div className="bg-white rounded-[30px] p-8 shadow-lg">
-
     <img
       src="/imagenes/regalo1.png"
       className="w-16 mx-auto mb-4"
     />
-
     <h3
       style={{ fontFamily: 'Tangerine' }}
       className="
