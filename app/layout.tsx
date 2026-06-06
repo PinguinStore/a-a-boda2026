@@ -3,7 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import '@fontsource/great-vibes'
 import { Cormorant_Garamond } from "next/font/google";
-
+<link
+href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+rel="stylesheet"
+/>
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

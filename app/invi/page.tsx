@@ -1,6 +1,10 @@
 'use client'
 import { supabase } from '@/src/lib/supabase'
 import { useEffect, useState, useRef } from 'react'
+<link
+href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+rel="stylesheet"
+/>
 import {
  FaChurch,
  FaGlassCheers,
@@ -233,8 +237,19 @@ async function confirmAttendance(attendance: boolean) {
     }
   }
   return (
-    <main className="bg-[#0B1320] text-white overflow-hidden min-h-screen font-serif">
-      <section className='relative h-screen' >
+    <main
+className="
+bg-[#020F3A]
+text-white
+"
+style={{
+backgroundImage:
+"url('/decoracion/textura-fondo.jpg')",
+backgroundSize:'cover',
+backgroundAttachment:'fixed'
+}}
+>
+    <section className='relative h-screen' >
 <img
   src="/decoracion/flor-izquierda.png"
   className="
@@ -287,16 +302,22 @@ async function confirmAttendance(attendance: boolean) {
     Aldair Osvaldo Lopez Sanchez
   </h2>
 
-  <p className="mt-6 text-lg md:text-2xl">
+  <p className="mt-6 text-lg md:text-2xl" style={{
+  fontFamily: 'Parisienne'
+}}>
     01 DE AGOSTO DE 2026
   </p>
 
-  <p className="text-sm md:text-lg">
+  <p className="text-sm md:text-lg" style={{
+  fontFamily: 'Parisienne'
+}}>
     Oruro - Bolivia
   </p>
 <div className="mt-8 bg-black/30 backdrop-blur-md rounded-2xl p-6 w-full max-w-md">
 
-  <p className="text-lg mb-4">FALTAN</p>
+  <p className="text-lg mb-4" style={{
+  fontFamily: 'Parisienne'
+}}>FALTAN</p>
 
   <div className="grid grid-cols-4 text-center gap-2">
 
@@ -324,93 +345,508 @@ async function confirmAttendance(attendance: boolean) {
 </div>
         </div>
       </section>
-<section className="py-24 bg-[#F6F1E7]">
-  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
-    <div>
-      <h2 className="text-5xl mb-6" style={{ fontFamily: 'Great Vibes' }}>
-        Nuestra Historia
-      </h2>
-      <p className="text-lg leading-8">
-        Texto bonito aquí...
-      </p>
+<section className="py-20 bg-[#F6F1E7] relative overflow-hidden">
+
+  {/* Decoración izquierda */}
+  <img
+    src="/decoracion/rama-izquierda.png"
+    className="
+    absolute
+    left-0
+    top-0
+    w-32
+    md:w-52
+    opacity-70
+    "
+  />
+
+  {/* Decoración derecha */}
+  <img
+    src="/decoracion/rama-derecha.png"
+    className="
+    absolute
+    right-0
+    top-0
+    w-32
+    md:w-52
+    opacity-70
+    "
+  />
+
+  <div className="max-w-5xl mx-auto px-6">
+
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+
+      <div className="order-2 md:order-1">
+
+        {/* BLOQUE HISTORIA */}
+        <div className="text-center">
+
+          <h2
+            className="text-5xl md:text-7xl text-[#2F3E34]"
+            style={{ fontFamily: 'Great Vibes' }}
+          >
+            Nuestra Historia
+          </h2>
+
+          <div className="flex items-center justify-center gap-4 my-4">
+            <div className="w-20 md:w-32 h-[2px] bg-[#D4C38A]" />
+            <span className="text-2xl text-[#8A9573]">♥</span>
+            <div className="w-20 md:w-32 h-[2px] bg-[#D4C38A]" />
+          </div>
+
+          <p className="text-lg md:text-xl leading-relaxed text-[#2F2F2F]">
+
+            Desde que nuestros caminos se cruzaron,
+            supimos que Dios tenía un plan perfecto
+            para nosotros.
+
+            <br /><br />
+
+            Hoy, después de tantas aventuras,
+            aprendizajes y momentos inolvidables,
+            hemos decidido unir nuestras vidas
+            para siempre.
+
+          </p>
+
+          <p
+            className="mt-8 text-2xl md:text-4xl text-[#6E8068]"
+            style={{ fontFamily: 'Great Vibes' }}
+          >
+            ¡Te invitamos a ser parte de este nuevo capítulo!
+          </p>
+
+        </div>
+
+      </div>
+
+      <div className="order-1 md:order-2">
+
+        <img
+          src="/imagenes/foto1.png"
+          className="
+          rounded-[40px]
+          shadow-2xl
+          w-full
+          object-cover
+          "
+        />
+
+      </div>
+
     </div>
-    <img
-      src="/imagenes/foto1.png"
-      className="rounded-3xl shadow-2xl"
-    />
+
   </div>
+
 </section>
 <section className="py-24 bg-[#040B40] text-white">
   <h2 className="text-center text-5xl mb-16" style={{ fontFamily: 'Great Vibes' }}>
+    Ubicaciones
+  </h2>
+  <div
+className="
+grid
+md:grid-cols-3
+gap-10
+max-w-6xl
+mx-auto
+"
+>
+<div className="text-center">
+
+<div
+className="
+w-24
+h-24
+mx-auto
+rounded-full
+bg-[#0A4A35]
+border-4
+border-[#D4AF37]
+flex
+items-center
+justify-center
+"
+>
+<FaRing size={35}/>
+</div>
+
+<h3 className="text-4xl mt-4">
+10:00
+</h3>
+
+<p>Boda Civil</p>
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.3007526541614!2d-67.1066688!3d-17.964739299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e2b118fd1078c1%3A0xb73c99c68f938a6f!2sSal%C3%B3n%20de%20Eventos%20%22Colonial%22!5e0!3m2!1ses-419!2sbo!4v1780708783308!5m2!1ses-419!2sbo"
+width="100%"
+height="180"
+loading="lazy"
+className="rounded-xl mt-4"
+/>
+</div>
+<div className="text-center">
+
+<div
+className="
+w-24
+h-24
+mx-auto
+rounded-full
+bg-[#0A4A35]
+border-4
+border-[#D4AF37]
+flex
+items-center
+justify-center
+"
+>
+<FaChurch size={35}/>
+</div>
+
+<h3 className="text-4xl mt-4">
+14:30
+</h3>
+
+<p>Boda Religiosa
+</p>
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.3942563840046!2d-67.11269612569615!3d-17.960385280008158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e2b0a4233d68f1%3A0xec30551c00b29df5!2sIglesia%20de%20San%20Gerardo!5e0!3m2!1ses-419!2sbo!4v1780709876286!5m2!1ses-419!2sbo"
+width="100%"
+height="180"
+loading="lazy"
+className="rounded-xl mt-4"
+/>
+</div>
+<div className="text-center">
+
+<div
+className="
+w-24
+h-24
+mx-auto
+rounded-full
+bg-[#0A4A35]
+border-4
+border-[#D4AF37]
+flex
+items-center
+justify-center
+"
+>
+<FaGlassCheers size={35}/>
+</div>
+
+<h3 className="text-4xl mt-4">
+16:00
+</h3>
+
+<p>Fiesta</p>
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.3007526541614!2d-67.1066688!3d-17.964739299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e2b118fd1078c1%3A0xb73c99c68f938a6f!2sSal%C3%B3n%20de%20Eventos%20%22Colonial%22!5e0!3m2!1ses-419!2sbo!4v1780708783308!5m2!1ses-419!2sbo"
+width="100%"
+height="180"
+loading="lazy"
+className="rounded-xl mt-4"
+/>
+</div>
+  </div>
+  <section className="py-20 bg-[#F6F1E7] relative overflow-hidden">
+
+  <h2
+    className="text-center text-5xl md:text-6xl mb-14 text-[#040B40]"
+    style={{ fontFamily: 'Great Vibes' }}
+  >
     Itinerario
   </h2>
-  <div className="flex justify-center gap-10 flex-wrap">
-    <div className="text-center">
-      <p className="text-3xl">10:30</p>
-      <p>Boda Civil</p>
+
+  <div className="max-w-5xl mx-auto px-4">
+
+    <img
+      src="/imagenes/itinerario.png"
+      alt="Itinerario"
+      className="w-full rounded-[30px] shadow-2xl"
+    />
+
+  </div>
+
+</section>
+<section className="py-20 bg-white">
+
+  <div className="max-w-5xl mx-auto px-6">
+
+    <div className="bg-[#F6F1E7] rounded-[40px] p-10 text-center shadow-xl">
+
+      <h2
+        className="text-5xl mb-6 text-[#040B40]"
+        style={{ fontFamily: 'Great Vibes' }}
+      >
+        Comparte tus Fotos
+      </h2>
+
+      <p className="text-lg mb-8 text-[#040B40]">
+        Ayúdanos a guardar los mejores recuerdos de este día tan especial.
+      </p>
+
+      <a
+        href="https://drive.google.com/drive/folders/1AX2KDfX4k8VSKxoEGv6b7VYsugjBNPSM"
+        target="_blank"
+      >
+        <img
+          src="/imagenes/qr-fotos.png"
+          className="w-64 mx-auto hover:scale-105 transition"
+        />
+      </a>
+
+      <p className="mt-6 text-[#040B40]">
+        Escanea el código QR o haz clic sobre él.
+      </p>
+
     </div>
-    <div className="text-center">
-      <p className="text-3xl">14:30</p>
-      <p>Religiosa</p>
-    </div>
-    <div className="text-center">
-      <p className="text-3xl">16:00</p>
-      <p>Fiesta</p>
+
+  </div>
+
+</section>
+</section>
+<section className="py-24 bg-[#F6F1E7] relative overflow-hidden">
+
+  {/* Decoraciones */}
+  <img
+    src="/decoracion/hoja-izquierda.png"
+    className="
+    absolute
+    left-0
+    top-1/2
+    -translate-y-1/2
+    w-24
+    md:w-40
+    opacity-80
+    "
+  />
+
+  <img
+    src="/decoracion/hoja-derecha.png"
+    className="
+    absolute
+    right-0
+    top-1/2
+    -translate-y-1/2
+    w-24
+    md:w-40
+    opacity-80
+    scale-x-[-1]
+    "
+  />
+
+  <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+
+    <h2
+      className="text-5xl md:text-7xl text-[#8A9573]"
+      style={{ fontFamily: 'Great Vibes' }}
+    >
+      Código de vestimenta
+    </h2>
+
+    <h3
+      className=" mt-4 text-2xl md:text-3xl font-bold text-[#040B40] animate-bounce
+      " style={{
+  fontFamily: 'Parisienne'
+}}
+    >
+      FORMAL
+    </h3>
+
+    <div className="grid md:grid-cols-2 gap-10 mt-12">
+
+      {/* MUJERES */}
+      <div className="bg-white rounded-[30px] p-8 shadow-xl" style={{
+  fontFamily: 'Parisienne'
+}}>
+
+        <img
+          src="/imagenes/mujer-formal.png"
+          alt="Mujer"
+          className="w-24 md:w-32 mx-auto"
+        />
+
+        <h4 className="text-3xl font-bold mt-4 text-[#040B40]" style={{
+  fontFamily: 'Parisienne'
+}}>
+          MUJERES
+        </h4>
+
+        <p className="text-2xl font-semibold mt-2 text-gray-700">
+          Vestido
+        </p>
+
+        <p className="mt-4 text-lg text-gray-700">
+          Deja el blanco para la novia
+        </p>
+
+      </div>
+
+      {/* HOMBRES */}
+      <div className="bg-white rounded-[30px] p-8 shadow-xl" style={{
+  fontFamily: 'Parisienne'
+}}>
+
+        <img
+          src="/imagenes/hombre-formal.png"
+          alt="Hombre"
+          className="w-24 md:w-32 mx-auto"
+        />
+
+        <h4 className="text-3xl font-bold mt-4 text-[#040B40]">
+          HOMBRES
+        </h4>
+
+        <p className="text-2xl font-semibold mt-2 text-gray-700">
+          Traje
+        </p>
+
+        <p className="mt-4 text-lg text-gray-700">
+          Evitar jeans de ser posible
+        </p>
+
+      </div>
+
     </div>
   </div>
+
 </section>
-      <section className='py-24 bg-[#D6D0BC]'>
-        <div className='max-w-4xl mx-auto text-center px-6'>
-          <h2 className='text-5xl font-serif mb-12'>
-            Código de Vestimenta
-          </h2>
-          <div className='bg-white rounded-[40px] p-10 shadow-xl'>
-            <h3 className='text-3xl font-bold mb-6'>
-              Elegante Formal
-            </h3>
-            <p className='text-xl'>
-              Agradecemos evitar prendas completamente blancas.
-            </p>
-            <div className='flex justify-center gap-6 mt-10'>
-              <div className='w-16 h-16 rounded-full bg-[#040B40]' />
-              <div className='w-16 h-16 rounded-full bg-[#0B4F2F]' />
-              <div className='w-16 h-16 rounded-full bg-[#D6D0BC] border-2 border-gray-400' />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className='py-24 bg-white'>
-        <div className='max-w-5xl mx-auto text-center px-6'>
-          <h2 className='text-5xl font-serif mb-12'>
-            Mesa de Regalos
-          </h2>
-          <div className='grid md:grid-cols-2 gap-10'>
-            <div className='bg-[#040B40] text-white rounded-[40px] p-10'>
-              <h3 className='text-3xl font-bold mb-6'>
-                Entrega Física
-              </h3>
-              <p className='text-xl'>
-                Puedes entregar tu regalo antes de la boda en:
-              </p>
-              <p className='text-2xl font-bold mt-6'>
-                Calama 497
-                <br />
-                La Paz - Bolivia
-              </p>
-            </div>
-            <div className='bg-[#0B4F2F] text-white rounded-[40px] p-10'>
-              <h3 className='text-3xl font-bold mb-6'>
-                Regalo por QR
-              </h3>
-              <img
-                src='/qr.png'
-                alt='QR'
-                className='w-64 mx-auto rounded-3xl bg-white p-4'
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+<section className="relative py-24 bg-[#F5F3EE] overflow-hidden">
+
+  {/* DECORACIONES */}
+  <img
+    src="/decoracion/hojas-izquierda.png"
+    className="
+    absolute
+    left-0
+    top-20
+    w-24
+    md:w-36
+    opacity-40
+    "
+  />
+
+  <img
+    src="/decoracion/hojas-derecha.png"
+    className="
+    absolute
+    right-0
+    top-16
+    w-20
+    md:w-32
+    opacity-40
+    "
+  />
+
+  <div className="max-w-4xl mx-auto text-center px-6">
+
+    {/* ICONO */}
+    <img
+      src="/imagenes/regalo.png"
+      alt="Regalo"
+      className="
+      w-16
+      md:w-20
+      mx-auto
+      mb-8
+      opacity-70
+      "
+    />
+
+    {/* TITULO */}
+    <h2
+      style={{
+        fontFamily: 'Tangerine'
+      }}
+      className="
+      text-6xl
+      md:text-8xl
+      text-[#9AA490]
+      mb-10
+      "
+    >
+      Sugerencia de Regalos
+    </h2>
+
+    {/* TEXTO */}
+    <p className="text-2xl md:text-3xl font-semibold text-[#222] mb-8">
+      ¡Te agradecemos mucho por tus regalos!
+    </p>
+
+    <p className="text-xl md:text-2xl text-[#222] leading-relaxed">
+      Puedes dejarlos en la siguiente
+      <br />
+      dirección:
+    </p>
+
+    {/* BOTON */}
+    <div className="mt-10">
+
+      <a
+        href="https://maps.google.com/?q=Calama+497+La+Paz"
+        target="_blank"
+        className="
+        inline-block
+        bg-[#9AA490]
+        text-white
+        px-10
+        py-4
+        rounded-xl
+        text-lg
+        font-bold
+        shadow-lg
+        hover:scale-105
+        transition-all
+        "
+      >
+        VER UBICACIÓN
+      </a>
+
+    </div>
+
+  </div>
+{/* FOTOS */}
+  <div className="bg-white rounded-[30px] p-8 shadow-lg">
+
+    <img
+      src="/imagenes/regalo1.png"
+      className="w-16 mx-auto mb-4"
+    />
+
+    <h3
+      style={{ fontFamily: 'Tangerine' }}
+      className="
+      text-5xl
+      text-[#9AA490]
+      mb-4
+      "
+    >
+      Regalo digital
+    </h3>
+
+    <p className="text-lg mb-6 text-[#9AA490]">
+      Escanea el código QR si deseas el regalo por qr.
+    </p>
+      <img
+        src="/imagenes/qr-cuenta.png"
+        alt="QR Fotos"
+        className="
+        w-40
+        mx-auto
+        hover:scale-105
+        transition-all
+        "
+      />
+
+    <p className="mt-4 text-sm text-gray-500">
+      MUCHAS GRACIAS 
+    </p>
+
+  </div>
+</section>
       <section className='py-24 bg-[#040B40] text-white'>
         <div className='max-w-6xl mx-auto px-6'>
           <h2 className='text-center text-5xl font-serif mb-16'>
