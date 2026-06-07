@@ -1195,14 +1195,12 @@ text-center
 "
 >
 <h2
-style={{
- fontFamily:'Great Vibes'
-}}
+style={{ fontFamily: 'Great Vibes' }}
 className="
 text-7xl
 text-[#D4AF37]
 mb-4
-" style={{ fontFamily: 'Great Vibes' }}
+"
 >
 A & A
 </h2>
