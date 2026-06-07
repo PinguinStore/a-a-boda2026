@@ -347,27 +347,15 @@ backgroundAttachment:'fixed'
       </section>
 <section className="py-20 bg-[#F6F1E7] relative overflow-hidden">
 
-  {/* Decoración izquierda */}
-  <img
-    src="/decoracion/rama-izquierda.png"
-    className="
-    absolute
-    left-0
-    top-0
-    w-32
-    md:w-52
-    opacity-70
-    "
-  />
 
   {/* Decoración derecha */}
   <img
-    src="/decoracion/rama-derecha.png"
+    src="/decoracion/flor-derecha2.png"
     className="
     absolute
     right-0
     top-0
-    w-32
+    w-100
     md:w-52
     opacity-70
     "
@@ -440,7 +428,127 @@ backgroundAttachment:'fixed'
   </div>
 
 </section>
-<section className="py-24 bg-[#040B40] text-white">
+<section className="relative py-24 bg-[#040B40] overflow-hidden">
+
+  {/* Decoraciones */}
+  <img
+    src="/decoracion/flor-izquierda.png"
+    className="absolute left-0 top-0 w-40 md:w-72 opacity-20"
+    alt=""
+  />
+
+  <img
+    src="/decoracion/flor-derecha.png"
+    className="absolute right-0 bottom-0 w-40 md:w-72 opacity-20"
+    alt=""
+  />
+
+  <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+
+    <h2
+      style={{ fontFamily: 'Great Vibes' }}
+      className="text-5xl md:text-7xl text-[#D4AF37] mb-6"
+    >
+      Nuestros Padres
+    </h2>
+
+    <div className="w-40 h-[2px] bg-[#D4AF37] mx-auto mb-2"></div>
+
+    <div className="text-[#D4AF37] text-3xl mb-2">
+      ♡
+    </div>
+
+    <div className="w-40 h-[2px] bg-[#D4AF37] mx-auto mb-16"></div>
+
+    <div className="grid md:grid-cols-2 gap-12">
+
+      {/* PADRES DEL NOVIO */}
+      <div className="bg-white/10 backdrop-blur-md rounded-[40px] p-10 border border-[#D4AF37]/30">
+
+        <div className="flex items-center gap-4 mb-6">
+          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
+          <span
+            style={{ fontFamily: 'Great Vibes' }}
+            className="text-3xl text-[#D4AF37]"
+          >
+            ♡
+          </span>
+          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
+        </div>
+
+        <h3
+          style={{ fontFamily: 'Great Vibes' }}
+          className="text-4xl text-white mb-8"
+        >
+          Padres del Novio
+        </h3>
+
+        <p className="text-white text-xl md:text-2xl font-serif leading-relaxed">
+          Ruy Osbaldo Lopez Lozano
+        </p>
+
+        <p className="text-[#D4AF37] text-2xl my-4">
+          &
+        </p>
+
+        <p className="text-white text-xl md:text-2xl font-serif leading-relaxed">
+          Judith Zulema Sanchez Ortiz
+        </p>
+
+        <div className="flex items-center gap-4 mt-8">
+          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
+          <span className="text-[#D4AF37] text-2xl">♡</span>
+          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
+        </div>
+
+      </div>
+
+      {/* PADRES DE LA NOVIA */}
+      <div className="bg-white/10 backdrop-blur-md rounded-[40px] p-10 border border-[#D4AF37]/30">
+
+        <div className="flex items-center gap-4 mb-6">
+          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
+          <span
+            style={{ fontFamily: 'Great Vibes' }}
+            className="text-3xl text-[#D4AF37]"
+          >
+            ♡
+          </span>
+          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
+        </div>
+
+        <h3
+          style={{ fontFamily: 'Great Vibes' }}
+          className="text-4xl text-white mb-8"
+        >
+          Padres de la Novia
+        </h3>
+
+        <p className="text-white text-xl md:text-2xl font-serif leading-relaxed">
+          Hernan Maldonado Bellanos
+        </p>
+
+        <p className="text-[#D4AF37] text-2xl my-4">
+          &
+        </p>
+
+        <p className="text-white text-xl md:text-2xl font-serif leading-relaxed">
+          Tatiana Siles
+        </p>
+
+        <div className="flex items-center gap-4 mt-8">
+          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
+          <span className="text-[#D4AF37] text-2xl">♡</span>
+          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section className="py-4 bg-[#040B40] text-white">
   <h2 className="text-center text-5xl mb-16" style={{ fontFamily: 'Great Vibes' }}>
     Ubicaciones
   </h2>
@@ -551,7 +659,7 @@ className="rounded-xl mt-4"
 />
 </div>
   </div>
-  <section className="py-20 bg-[#F6F1E7] relative overflow-hidden">
+  <section className="py-10 bg-[#F6F1E7] relative overflow-hidden">
 
   <h2
     className="text-center text-5xl md:text-6xl mb-14 text-[#040B40]"
@@ -571,7 +679,7 @@ className="rounded-xl mt-4"
   </div>
 
 </section>
-<section className="py-20 bg-white">
+<section className="py-10 bg-white">
 
   <div className="max-w-5xl mx-auto px-6">
 
@@ -608,11 +716,11 @@ className="rounded-xl mt-4"
 
 </section>
 </section>
-<section className="py-24 bg-[#F6F1E7] relative overflow-hidden">
+<section className="py-10 bg-[#F6F1E7] relative overflow-hidden">
 
   {/* Decoraciones */}
   <img
-    src="/decoracion/hoja-izquierda.png"
+    src="/decoracion/flor-izquierda.png"
     className="
     absolute
     left-0
@@ -625,7 +733,7 @@ className="rounded-xl mt-4"
   />
 
   <img
-    src="/decoracion/hoja-derecha.png"
+    src="/decoracion/flor-derecha.png"
     className="
     absolute
     right-0
@@ -714,7 +822,7 @@ className="rounded-xl mt-4"
   </div>
 
 </section>
-<section className="relative py-24 bg-[#F5F3EE] overflow-hidden">
+<section className="relative py-4 bg-[#F5F3EE] overflow-hidden">
 
   {/* DECORACIONES */}
   <img
@@ -758,9 +866,7 @@ className="rounded-xl mt-4"
 
     {/* TITULO */}
     <h2
-      style={{
-        fontFamily: 'Tangerine'
-      }}
+      style={{ fontFamily: 'Great Vibes' }}
       className="
       text-6xl
       md:text-8xl
@@ -786,7 +892,7 @@ className="rounded-xl mt-4"
     <div className="mt-10">
 
       <a
-        href="https://maps.google.com/?q=Calama+497+La+Paz"
+        href="https://maps.app.goo.gl/1fmLzAaPDZmVdR6c9"
         target="_blank"
         className="
         inline-block
@@ -796,7 +902,7 @@ className="rounded-xl mt-4"
         py-4
         rounded-xl
         text-lg
-        font-bold
+        font-serif
         shadow-lg
         hover:scale-105
         transition-all
@@ -815,7 +921,7 @@ className="rounded-xl mt-4"
       className="w-16 mx-auto mb-4"
     />
     <h3
-      style={{ fontFamily: 'Tangerine' }}
+      style={{ fontFamily: 'Great Vibes' }}
       className="
       text-5xl
       text-[#9AA490]
@@ -825,8 +931,8 @@ className="rounded-xl mt-4"
       Regalo digital
     </h3>
 
-    <p className="text-lg mb-6 text-[#9AA490]">
-      Escanea el código QR si deseas el regalo por qr.
+    <p className="text-lg mb-6 font-serif text-[#9AA490]">
+      Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle con nosotros, puedes hacerlo escaneando el siguiente código QR.
     </p>
       <img
         src="/imagenes/qr-cuenta.png"
@@ -871,15 +977,15 @@ className="rounded-xl mt-4"
       </section>
       <section className='py-24 bg-white'>
         <div className='max-w-5xl mx-auto text-center px-6'>
-          <h2 className='text-5xl font-serif mb-10'>
+          <h2 className='text-5xl font-serif mb-10 text-[#9AA490]' style={{ fontFamily: 'Great Vibes' }}>
             Un Versículo Especial
           </h2>
-          <div className='bg-[#D6D0BC] rounded-[40px] p-12 shadow-xl'>
-            <p className='text-3xl italic leading-relaxed'>
+          <div className='bg-[#D6D0BC] rounded-[40px] p-12 shadow-xl' style={{ fontFamily: 'Great Vibes' }}>
+            <p className='text-3xl italic leading-relaxed text-[#00072E]' >
               "Y sobre todas estas cosas vestíos de amor,
               que es el vínculo perfecto."
             </p>
-            <p className='mt-8 text-2xl font-bold'>
+            <p className='mt-8 text-2xl font-bold text-[#9AA490]'>
               Colosenses 3:14
             </p>
           </div>
@@ -1034,14 +1140,14 @@ className="
 text-7xl
 text-[#D4AF37]
 mb-4
-"
+" style={{ fontFamily: 'Great Vibes' }}
 >
 A & A
 </h2>
-<p className="text-3xl">
+<p className="text-3xl" style={{ fontFamily: 'Great Vibes' }}>
 01.08.2026
 </p>
-<p className="mt-4">
+<p className="mt-4" style={{ fontFamily: 'Great Vibes' }}>
 Oruro - Bolivia
 </p>
 </footer>
