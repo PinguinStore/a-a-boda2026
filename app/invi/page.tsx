@@ -70,8 +70,6 @@ const [companionName, setCompanionName] = useState('')
   const filteredGuests = guests.filter(g => g.novios === mode)
   const [selectedGuest, setSelectedGuest] =
     useState<any>(null)
-  const [guestIndex, setGuestIndex] =
-    useState(0)
   useEffect(() => {
     loadGuests()
   }, [])
@@ -203,39 +201,6 @@ async function confirmAttendance(attendance: boolean) {
     return () =>
       clearInterval(interval)
   }, [])
-  useEffect(() => {
-    if (
-      guests.length > 0 &&
-      !selectedGuest
-    ) {
-      setSelectedGuest(
-        guests[0]
-      )
-    }
-  }, [guests])
-  const nextGuest = () => {
-    if (
-      guestIndex <
-      guests.length - 1
-    ) {
-      const newIndex =
-        guestIndex + 1
-      setGuestIndex(newIndex)
-      setSelectedGuest(
-        guests[newIndex]
-      )
-    }
-  }
-  const prevGuest = () => {
-    if (guestIndex > 0) {
-      const newIndex =
-        guestIndex - 1
-      setGuestIndex(newIndex)
-      setSelectedGuest(
-        guests[newIndex]
-      )
-    }
-  }
   
   return (
     <main
@@ -1116,7 +1081,11 @@ className="rounded-xl mt-4"
         <div className="grid grid-cols-2 gap-4">
 
           <button
-            onClick={() => setMode('novio')}
+            onClick={() => {
+  setSelectedGuest(null)
+  setCompanionName('')
+  setMode('novio')
+}}
             className="
               p-6
               rounded-3xl
@@ -1139,7 +1108,11 @@ className="rounded-xl mt-4"
           </button>
 
           <button
-            onClick={() => setMode('novia')}
+            onClick={() => {
+  setSelectedGuest(null)
+  setCompanionName('')
+  setMode('novia')
+}}
             className="
               p-6
               rounded-3xl
