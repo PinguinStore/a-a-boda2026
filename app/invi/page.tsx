@@ -1061,100 +1061,253 @@ className="rounded-xl mt-4"
       </button>
       {
         showConfirm && (
-<div className='fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4'>
-  <div className='bg-white w-full max-w-lg rounded-[40px] p-8 shadow-2xl border border-[#D4AF37]'>
+<div className="fixed inset-0 bg-[#040B40]/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
 
-    {/* TITULO */}
-    <h2 className='text-3xl font-bold text-center mb-6 text-[#040B40]'>
-      Confirmación de Asistencia
-    </h2>
+  <div
+    className="
+      relative
+      w-full
+      max-w-xl
+      bg-gradient-to-b
+      from-[#FAF7F0]
+      to-[#EDE4D0]
+      rounded-[40px]
+      p-8
+      border-[3px]
+      border-[#D4AF37]
+      shadow-[0_0_50px_rgba(212,175,55,.35)]
+      overflow-hidden
+    "
+  >
 
-    {/* PASO 1: FAMILIA */}
+    {/* decoración superior */}
+    <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-[#D4AF37] via-[#F7E7A9] to-[#D4AF37]" />
+
+    {/* título */}
+    <div className="text-center mb-8">
+
+      <p className="uppercase tracking-[5px] text-sm text-[#A8893A]">
+        Nuestra Boda
+      </p>
+
+      <h2
+        style={{ fontFamily: 'Great Vibes' }}
+        className="text-5xl text-[#040B40] mt-2"
+      >
+        Confirmación de Asistencia
+      </h2>
+
+      <div className="flex justify-center items-center gap-3 mt-4">
+        <div className="w-20 h-[1px] bg-[#D4AF37]" />
+        <span className="text-[#D4AF37] text-xl">♥</span>
+        <div className="w-20 h-[1px] bg-[#D4AF37]" />
+      </div>
+
+    </div>
+
+    {/* PASO 1 */}
     {!mode && (
-      <div className='grid grid-cols-2 gap-4'>
-        <button
-          onClick={() => setMode('novio')}
-          className='bg-gradient-to-b from-blue-900 to-blue-700 text-white p-6 rounded-3xl shadow-lg hover:scale-105 transition'
-        >
-          👔 Familia Novio
-        </button>
+      <div>
 
-        <button
-          onClick={() => setMode('novia')}
-          className='bg-gradient-to-b from-pink-600 to-pink-400 text-white p-6 rounded-3xl shadow-lg hover:scale-105 transition'
-        >
-          👰 Familia Novia
-        </button>
+        <p className="text-center text-[#040B40] mb-6 text-lg">
+          Seleccione la familia a la que pertenece
+        </p>
+
+        <div className="grid grid-cols-2 gap-4">
+
+          <button
+            onClick={() => setMode('novio')}
+            className="
+              p-6
+              rounded-3xl
+              bg-gradient-to-b
+              from-[#040B40]
+              to-[#0A1E73]
+              text-white
+              shadow-xl
+              hover:scale-105
+              transition
+            "
+          >
+            <div className="text-4xl mb-3">
+              🤵
+            </div>
+
+            <div className="font-bold">
+              Familia del Novio
+            </div>
+          </button>
+
+          <button
+            onClick={() => setMode('novia')}
+            className="
+              p-6
+              rounded-3xl
+              bg-gradient-to-b
+              from-[#D4AF37]
+              to-[#B78A1B]
+              text-white
+              shadow-xl
+              hover:scale-105
+              transition
+            "
+          >
+            <div className="text-4xl mb-3">
+              👰
+            </div>
+
+            <div className="font-bold">
+              Familia de la Novia
+            </div>
+          </button>
+
+        </div>
       </div>
     )}
 
-    {/* PASO 2: LISTA INVITADOS */}
+    {/* PASO 2 */}
     {mode && !selectedGuest && (
+
       <div>
-        <h3 className='text-center text-lg font-semibold mb-4'>
-          Selecciona tu nombre
+
+        <h3
+          style={{ fontFamily: 'Great Vibes' }}
+          className="text-4xl text-center text-[#040B40] mb-6"
+        >
+          Seleccione su nombre
         </h3>
 
-        <div className='max-h-60 overflow-y-auto space-y-2'>
+        <div className="max-h-72 overflow-y-auto space-y-3 pr-2">
+
           {filteredGuests.map((g) => (
+
             <button
               key={g.id}
               onClick={() => setSelectedGuest(g)}
-              className='w-full text-left p-4 rounded-2xl bg-gray-100 hover:bg-[#D6D0BC] transition'
+              className="
+                w-full
+                bg-white
+                border-2
+                border-[#E7D5A3]
+                rounded-2xl
+                p-4
+                text-left
+                hover:bg-[#FFF8E8]
+                transition
+              "
             >
-              👤 {g.nombre}
-              <span className='float-right font-bold'>
-                {g.cantidad_invitados} pax
-              </span>
+
+              <div className="font-bold text-[#040B40]">
+                {g.nombre}
+              </div>
+
+              <div className="text-sm text-[#7D6A2C] mt-1">
+                Invitados: {g.cantidad_invitados}
+              </div>
+
             </button>
+
           ))}
+
         </div>
 
         <button
           onClick={() => setMode(null)}
-          className='mt-4 text-sm underline w-full'
+          className="
+            mt-6
+            w-full
+            border
+            border-[#040B40]
+            text-[#040B40]
+            p-3
+            rounded-2xl
+          "
         >
-          Volver
+          ← Volver
         </button>
+
       </div>
     )}
 
-    {/* PASO 3: CONFIRMACIÓN */}
+    {/* PASO 3 */}
     {selectedGuest && (
-      <div className='text-center'>
 
-        <p className='text-xl font-bold mb-2'>
+      <div className="text-center">
+
+        <h3
+          style={{ fontFamily: 'Great Vibes' }}
+          className="text-4xl text-[#040B40]"
+        >
           {selectedGuest.nombre}
+        </h3>
+
+        <p className="mt-2 text-[#7D6A2C]">
+          Invitaciones asignadas
         </p>
 
-        <p className='mb-4 text-gray-600'>
-          Invitados: {selectedGuest.cantidad_invitados}
+        <p className="text-6xl font-black text-[#D4AF37] mb-6">
+          {selectedGuest.cantidad_invitados}
         </p>
 
-        {/* acompañante */}
         {selectedGuest.cantidad_invitados === 2 && (
+
           <input
             value={companionName}
-            onChange={(e) => setCompanionName(e.target.value)}
-            placeholder='Nombre del acompañante'
-            className='w-full border rounded-2xl p-3 mb-4'
+            onChange={(e) =>
+              setCompanionName(e.target.value)
+            }
+            placeholder="Nombre del acompañante"
+            className="
+              w-full
+              p-4
+              rounded-2xl
+              border-2
+              border-[#D4AF37]
+              bg-white
+              mb-6
+            "
           />
+
         )}
 
-        <div className='grid grid-cols-2 gap-4'>
+        <div className="grid grid-cols-2 gap-4">
+
           <button
-            onClick={() => confirmAttendance(true)}
-            className='bg-green-600 text-white p-4 rounded-2xl font-bold hover:scale-105 transition'
+            onClick={() =>
+              confirmAttendance(true)
+            }
+            className="
+              bg-green-600
+              text-white
+              p-4
+              rounded-2xl
+              font-bold
+              shadow-lg
+              hover:scale-105
+              transition
+            "
           >
-            Confirmar ✔
+            Confirmar ✓
           </button>
 
           <button
-            onClick={() => confirmAttendance(false)}
-            className='bg-red-600 text-white p-4 rounded-2xl font-bold hover:scale-105 transition'
+            onClick={() =>
+              confirmAttendance(false)
+            }
+            className="
+              bg-red-600
+              text-white
+              p-4
+              rounded-2xl
+              font-bold
+              shadow-lg
+              hover:scale-105
+              transition
+            "
           >
             No asistir
           </button>
+
         </div>
 
         <button
@@ -1162,10 +1315,15 @@ className="rounded-xl mt-4"
             setSelectedGuest(null)
             setCompanionName('')
           }}
-          className='mt-4 text-sm underline'
+          className="
+            mt-5
+            text-[#040B40]
+            underline
+          "
         >
-          Atrás
+          ← Cambiar invitado
         </button>
+
       </div>
     )}
 
@@ -1177,12 +1335,21 @@ className="rounded-xl mt-4"
         setSelectedGuest(null)
         setCompanionName('')
       }}
-      className='mt-6 w-full bg-gray-200 p-3 rounded-2xl'
+      className="
+        mt-8
+        w-full
+        bg-[#040B40]
+        text-white
+        p-4
+        rounded-2xl
+        font-semibold
+      "
     >
       Cerrar
     </button>
 
   </div>
+
 </div>
         )
       }
