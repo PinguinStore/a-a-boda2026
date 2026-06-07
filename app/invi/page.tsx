@@ -236,6 +236,7 @@ async function confirmAttendance(attendance: boolean) {
       )
     }
   }
+  
   return (
     <main
 className="
@@ -362,7 +363,19 @@ backgroundAttachment:'fixed'
   />
 
   <div className="max-w-5xl mx-auto px-6">
-
+<div className="absolute inset-0 overflow-hidden pointer-events-none">
+  {[...Array(25)].map((_, i) => (
+    <span
+      key={i}
+      className="gold-particle"
+      style={{
+        left: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 8}s`,
+        animationDuration: `${8 + Math.random() * 8}s`
+      }}
+    />
+  ))}
+</div>
     <div className="grid md:grid-cols-2 gap-10 items-center">
 
       <div className="order-2 md:order-1">
@@ -444,7 +457,19 @@ backgroundAttachment:'fixed'
   />
 
   <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-
+<div className="absolute inset-0 overflow-hidden pointer-events-none">
+  {[...Array(25)].map((_, i) => (
+    <span
+      key={i}
+      className="gold-particle"
+      style={{
+        left: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 8}s`,
+        animationDuration: `${8 + Math.random() * 8}s`
+      }}
+    />
+  ))}
+</div>
     <h2
       style={{ fontFamily: 'Great Vibes' }}
       className="text-5xl md:text-7xl text-[#D4AF37] mb-6"
@@ -561,6 +586,19 @@ max-w-6xl
 mx-auto
 "
 >
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+  {[...Array(25)].map((_, i) => (
+    <span
+      key={i}
+      className="gold-particle"
+      style={{
+        left: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 8}s`,
+        animationDuration: `${8 + Math.random() * 8}s`
+      }}
+    />
+  ))}
+</div>
 <div className="text-center">
 
 <div
@@ -660,7 +698,19 @@ className="rounded-xl mt-4"
 </div>
   </div>
   <section className="py-10 bg-[#F6F1E7] relative overflow-hidden">
-
+<div className="absolute inset-0 overflow-hidden pointer-events-none">
+  {[...Array(25)].map((_, i) => (
+    <span
+      key={i}
+      className="gold-particle"
+      style={{
+        left: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 8}s`,
+        animationDuration: `${8 + Math.random() * 8}s`
+      }}
+    />
+  ))}
+</div>
   <h2
     className="text-center text-5xl md:text-6xl mb-14 text-[#040B40]"
     style={{ fontFamily: 'Great Vibes' }}
@@ -747,7 +797,19 @@ className="rounded-xl mt-4"
   />
 
   <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-
+<div className="absolute inset-0 overflow-hidden pointer-events-none">
+  {[...Array(25)].map((_, i) => (
+    <span
+      key={i}
+      className="gold-particle"
+      style={{
+        left: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 8}s`,
+        animationDuration: `${8 + Math.random() * 8}s`
+      }}
+    />
+  ))}
+</div>
     <h2
       className="text-5xl md:text-7xl text-[#8A9573]"
       style={{ fontFamily: 'Great Vibes' }}
