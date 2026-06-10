@@ -60,3 +60,23 @@ body {
     opacity: 0;
   }
 }
+@keyframes pulseGold {
+  0% {
+    transform: scale(1);
+    opacity: .8;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: .8;
+  }
+}
+
+.loader-heart {
+  animation: pulseGold 2s infinite;
+}

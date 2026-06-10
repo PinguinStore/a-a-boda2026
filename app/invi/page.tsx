@@ -21,13 +21,62 @@ export default function Home() {
     '/imagenes/foto6.png',
     '/imagenes/foto7.png'
   ]
+  const videoUrl = '/videos/nuestra-historia.mp4'
   const [currentImage, setCurrentImage] = useState(0)
   const [timeLeft, setTimeLeft] = useState('')
 const audioRef = useRef<HTMLAudioElement | null>(null)
 const [musicPlaying, setMusicPlaying] = useState(false)
 useEffect(() => {
+  const preload = async () => {
+    try {
+
+      const imagePromises = images.map(src => {
+        return new Promise(resolve => {
+          const img = new Image()
+          img.src = src
+          img.onload = resolve
+          img.onerror = resolve
+        })
+      })
+
+      const audioPromise = new Promise(resolve => {
+        const audio = new Audio('/music/music.mp3')
+        audio.oncanplaythrough = resolve
+        audio.onerror = resolve
+      })
+
+      const videoPromise = new Promise(resolve => {
+        const video = document.createElement('video')
+        video.src = videoUrl
+        video.preload = 'auto'
+        video.oncanplaythrough = resolve
+        video.onerror = resolve
+      })
+
+      setLoadingText('Preparando nuestra historia...')
+      await Promise.all(imagePromises)
+
+      setLoadingText('Cargando recuerdos...')
+      await audioPromise
+
+      setLoadingText('Preparando una sorpresa...')
+      await videoPromise
+
+      setTimeout(() => {
+        setLoading(false)
+      }, 1500)
+
+    } catch {
+      setLoading(false)
+    }
+  }
+
+  preload()
+}, [])
+useEffect(() => {
   audioRef.current = new Audio('/music/music.mp3')
   audioRef.current.loop = true
+  
   return () => {
     audioRef.current?.pause()
     audioRef.current = null
@@ -68,6 +117,8 @@ const [companionName, setCompanionName] = useState('')
   const [showConfirm, setShowConfirm] = useState(false)
   const [guests, setGuests] = useState<any[]>([])
   const filteredGuests = guests.filter(g => g.novios === mode)
+  const [loading, setLoading] = useState(true)
+const [loadingText, setLoadingText] = useState('Preparando nuestra historia...')
   const [selectedGuest, setSelectedGuest] =
     useState<any>(null)
   useEffect(() => {
@@ -684,7 +735,7 @@ className="rounded-xl mt-4"
   </div>
 
 </section>
-<section className="py-10 bg-white">
+<section className="py-10 bg-white relative overflow-hidden">
 
   <div className="max-w-5xl mx-auto px-6">
 
@@ -970,7 +1021,20 @@ className="rounded-xl mt-4"
 
   </div>
 </section>
-      <section className='py-24 bg-[#040B40] text-white'>
+      <section className='py-24 bg-[#040B40] text-white relative overflow-hidden'>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+  {[...Array(25)].map((_, i) => (
+    <span
+      key={i}
+      className="gold-particle"
+      style={{
+        left: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 8}s`,
+        animationDuration: `${8 + Math.random() * 8}s`
+      }}
+    />
+  ))}
+</div>
         <div className='max-w-6xl mx-auto px-6'>
           <h2 className='text-center text-5xl font-serif mb-16'>
             Nuestros Momentos
