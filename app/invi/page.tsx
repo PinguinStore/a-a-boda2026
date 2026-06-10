@@ -398,14 +398,12 @@ backgroundAttachment:'fixed'
           object-cover
           "
         />
-
       </div>
-
     </div>
-
   </div>
-
 </section>
+
+
 <section className="relative py-24 bg-[#040B40] overflow-hidden">
 
   {/* Decoraciones */}
@@ -421,7 +419,9 @@ backgroundAttachment:'fixed'
     alt=""
   />
 
-  <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+
+
+  <div className="max-w-3xl mx-auto">
 <div className="absolute inset-0 overflow-hidden pointer-events-none">
   {[...Array(25)].map((_, i) => (
     <span
@@ -435,109 +435,99 @@ backgroundAttachment:'fixed'
     />
   ))}
 </div>
-    <h2
-      style={{ fontFamily: 'Great Vibes' }}
-      className="text-5xl md:text-7xl text-[#D4AF37] mb-6"
-    >
-      Nuestros Padres
-    </h2>
+  <div
+    className="
+      bg-white/10
+      backdrop-blur-md
+      rounded-[40px]
+      p-10 md:p-14
+      border border-[#D4AF37]/40
+      shadow-[0_0_40px_rgba(212,175,55,.15)]
+      text-center
+    "
+  >
 
-    <div className="w-40 h-[2px] bg-[#D4AF37] mx-auto mb-2"></div>
+    {/* PADRES DEL NOVIO */}
 
-    <div className="text-[#D4AF37] text-3xl mb-2">
-      ♡
+    <div className="flex items-center gap-4 mb-6">
+      <div className="flex-1 h-[1px] bg-[#D4AF37]" />
+      <span
+        style={{ fontFamily: 'Great Vibes' }}
+        className="text-4xl text-[#D4AF37]"
+      >
+        ♡
+      </span>
+      <div className="flex-1 h-[1px] bg-[#D4AF37]" />
     </div>
 
-    <div className="w-40 h-[2px] bg-[#D4AF37] mx-auto mb-16"></div>
+    <h3
+      style={{ fontFamily: 'Great Vibes' }}
+      className="text-5xl text-white mb-8"
+    >
+      Padres del Novio
+    </h3>
 
-    <div className="grid md:grid-cols-2 gap-12">
+    <p className="text-white text-2xl leading-relaxed">
+      Ruy Osbaldo Lopez Lozano
+    </p>
 
-      {/* PADRES DEL NOVIO */}
-      <div className="bg-white/10 backdrop-blur-md rounded-[40px] p-10 border border-[#D4AF37]/30">
+    <p className="text-[#D4AF37] text-3xl my-5">
+      &
+    </p>
 
-        <div className="flex items-center gap-4 mb-6">
-          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
-          <span
-            style={{ fontFamily: 'Great Vibes' }}
-            className="text-3xl text-[#D4AF37]"
-          >
-            ♡
-          </span>
-          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
-        </div>
+    <p className="text-white text-2xl leading-relaxed">
+      Judith Zulema Sanchez Ortiz
+    </p>
 
-        <h3
-          style={{ fontFamily: 'Great Vibes' }}
-          className="text-4xl text-white mb-8"
-        >
-          Padres del Novio
-        </h3>
+    {/* Separador */}
 
-        <p className="text-white text-xl md:text-2xl font-serif leading-relaxed">
-          Ruy Osbaldo Lopez Lozano
-        </p>
+    <div className="flex items-center gap-4 my-12">
+      <div className="flex-1 h-[1px] bg-[#D4AF37]" />
+      <span className="text-[#D4AF37] text-4xl">
+        ♡
+      </span>
+      <div className="flex-1 h-[1px] bg-[#D4AF37]" />
+    </div>
 
-        <p className="text-[#D4AF37] text-2xl my-4">
-          &
-        </p>
+    {/* PADRES DE LA NOVIA */}
 
-        <p className="text-white text-xl md:text-2xl font-serif leading-relaxed">
-          Judith Zulema Sanchez Ortiz
-        </p>
+    <h3
+      style={{ fontFamily: 'Great Vibes' }}
+      className="text-5xl text-white mb-8"
+    >
+      Padres de la Novia
+    </h3>
 
-        <div className="flex items-center gap-4 mt-8">
-          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
-          <span className="text-[#D4AF37] text-2xl">♡</span>
-          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
-        </div>
+    <p className="text-white text-2xl leading-relaxed">
+      Hernan Luis Maldonado Bellanos
+    </p>
 
-      </div>
+    <p className="text-[#D4AF37] text-3xl my-5">
+      &
+    </p>
 
-      {/* PADRES DE LA NOVIA */}
-      <div className="bg-white/10 backdrop-blur-md rounded-[40px] p-10 border border-[#D4AF37]/30">
+    <p className="text-white text-2xl leading-relaxed">
+      Tatiana Juana Siles Alvarado
+    </p>
 
-        <div className="flex items-center gap-4 mb-6">
-          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
-          <span
-            style={{ fontFamily: 'Great Vibes' }}
-            className="text-3xl text-[#D4AF37]"
-          >
-            ♡
-          </span>
-          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
-        </div>
-
-        <h3
-          style={{ fontFamily: 'Great Vibes' }}
-          className="text-4xl text-white mb-8"
-        >
-          Padres de la Novia
-        </h3>
-
-        <p className="text-white text-xl md:text-2xl font-serif leading-relaxed">
-          Hernan Maldonado Bellanos
-        </p>
-
-        <p className="text-[#D4AF37] text-2xl my-4">
-          &
-        </p>
-
-        <p className="text-white text-xl md:text-2xl font-serif leading-relaxed">
-          Tatiana Siles
-        </p>
-
-        <div className="flex items-center gap-4 mt-8">
-          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
-          <span className="text-[#D4AF37] text-2xl">♡</span>
-          <div className="flex-1 h-[1px] bg-[#D4AF37]"></div>
-        </div>
-
-      </div>
-
+    <div className="flex items-center gap-4 mt-12">
+      <div className="flex-1 h-[1px] bg-[#D4AF37]" />
+      <span className="text-[#D4AF37] text-4xl">
+        ♡
+      </span>
+      <div className="flex-1 h-[1px] bg-[#D4AF37]" />
     </div>
 
   </div>
+
+</div>
 </section>
+
+
+
+
+
+
 <section className="py-4 bg-[#040B40] text-white">
   <h2 className="text-center text-5xl mb-16" style={{ fontFamily: 'Great Vibes' }}>
     Ubicaciones
@@ -626,7 +616,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.3942563840046!2d
 width="100%"
 height="180"
 loading="lazy"
-className="rounded-xl mt-4"
+className="rounded-xl mt-10"
 />
 </div>
 <div className="text-center">
@@ -799,7 +789,7 @@ className="rounded-xl mt-4"
 }}>
 
         <img
-          src="/imagenes/mujer-formal.png"
+          src="/imagenes/mujer-formal1.png"
           alt="Mujer"
           className="w-24 md:w-32 mx-auto"
         />
@@ -817,7 +807,9 @@ className="rounded-xl mt-4"
         <p className="mt-4 text-lg text-gray-700">
           Deja el blanco para la novia
         </p>
-
+        <p className="mt-4 text-lg text-gray-700">
+          Y el azul para las damas de honor
+        </p>
       </div>
 
       {/* HOMBRES */}
@@ -826,7 +818,7 @@ className="rounded-xl mt-4"
 }}>
 
         <img
-          src="/imagenes/hombre-formal.png"
+          src="/imagenes/hombre-formal1.png"
           alt="Hombre"
           className="w-24 md:w-32 mx-auto"
         />
