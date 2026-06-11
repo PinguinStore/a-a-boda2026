@@ -527,7 +527,7 @@ backgroundAttachment:'fixed'
     </p>
 
     <p className="text-white text-2xl leading-relaxed">
-      Judith Zulema Sanchez Ortiz
+      Zulema Sanchez Ortiz
     </p>
 
     {/* Separador */}
@@ -550,7 +550,7 @@ backgroundAttachment:'fixed'
     </h3>
 
     <p className="text-white text-2xl leading-relaxed">
-      Hernan Luis Maldonado Bellanos
+      Hernan Maldonado Bellanos
     </p>
 
     <p className="text-[#D4AF37] text-3xl my-5">
@@ -558,7 +558,7 @@ backgroundAttachment:'fixed'
     </p>
 
     <p className="text-white text-2xl leading-relaxed">
-      Tatiana Juana Siles Alvarado
+      Tatiana Siles Alvarado
     </p>
 
     <div className="flex items-center gap-4 mt-12">
