@@ -91,7 +91,7 @@ useEffect(() => {
       top: 1,
       behavior: 'auto'
     })
-  }, 10)
+  }, 20)
 
   return () => clearInterval(timer)
 }, [])
@@ -1031,7 +1031,7 @@ className="wedding-bg"
         </p>
 
         <p className="mt-4 text-lg text-gray-700">
-          Evitar jeans de ser posible
+          Traje formal oscuro
         </p>
 
       </div>
@@ -1280,26 +1280,18 @@ fixed
 right-6
 bottom-6
 z-40
-
 blue-glass
 text-[#F6F1E7]
-
 px-8
 py-4
-
 rounded-full
-
 border-2
 border-[#D4AF37]
-
 shadow-[0_0_25px_rgba(212,175,55,.35)]
-
 hover:bg-[#0A1E73]
 hover:scale-105
-
 transition-all
 duration-500
-
 animate-bounce
 "
       >
@@ -1614,6 +1606,38 @@ viewport={{ once: true }}
 transition={{ duration: 1 }}
 className="wedding-bg"
 >
+  <section className="py-12 bg-[#F6F1E7]">
+  <div className="max-w-3xl mx-auto px-6">
+
+    <div className="bg-white rounded-[35px] p-10 shadow-xl text-center">
+
+      <div className="text-5xl mb-4">
+        🤍
+      </div>
+
+      <h2
+        className="text-5xl text-[#040B40] mb-6"
+        style={{ fontFamily: 'Great Vibes' }}
+      >
+        Celebración para Adultos
+      </h2>
+
+      <p className="text-lg text-gray-700 leading-relaxed">
+        Aunque amamos a los pequeños de la familia,
+        hemos decidido que nuestra celebración sea
+        exclusivamente para adultos.
+      </p>
+
+      <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+        Agradecemos de corazón su comprensión y
+        esperamos que disfruten con nosotros de esta
+        noche tan especial.
+      </p>
+
+    </div>
+
+  </div>
+</section>
   <footer
 className="
 text-white
