@@ -23,7 +23,7 @@ useEffect(() => {
     const allImages = [
       "/portada/top.png",
       "/portada/left.png",
-      "/portada/right.jpg",
+      "/portada/right1.png",
       "/portada/bottom.png",
       "/portada/monograma.png",
       "/portada/sobre.png",
@@ -112,18 +112,16 @@ if (!assetsLoaded) {
   );
 }
   return (
-    <main className="bg-white min-h-screen flex justify-center">
-      <div className="relative w-full max-w-[430px] bg-white overflow-hidden">
-
+<main className="bg-white w-screen min-h-[100dvh] overflow-hidden">
+  <div className="relative w-full min-h-[100dvh] bg-white overflow-hidden">
         {/* FLORES SUPERIORES */}
-        <Image
-          src="/portada/top.png"
-          alt=""
-          width={300}
-          height={100}
-          className="w-full"
-          priority
-        />
+<Image
+  src="/portada/top.png"
+  alt=""
+  width={800}
+  height={250}
+  className="w-full h-auto"
+/>
 
         {/* FLORES LATERALES */}
         <Image
@@ -135,7 +133,7 @@ if (!assetsLoaded) {
         />
 
         <Image
-          src="/portada/right.jpg"
+          src="/portada/right1.png"
           alt=""
           width={120}
           height={300}
@@ -143,7 +141,16 @@ if (!assetsLoaded) {
         />
 
         {/* CONTENIDO */}
-        <div className="flex flex-col items-center pt-10 px-4">
+        <div
+  className="
+  flex
+  flex-col
+  items-center
+  justify-center
+  min-h-[60vh]
+  px-4
+  "
+>
 
           {/* MONOGRAMA */}
           <Image
@@ -187,13 +194,13 @@ if (!assetsLoaded) {
 
         {/* FLORES INFERIORES */}
         <div className="mt-12">
-          <Image
-            src="/portada/bottom.png"
-            alt=""
-            width={430}
-            height={200}
-            className="w-full"
-          />
+<Image
+  src="/portada/bottom.png"
+  alt=""
+  width={800}
+  height={250}
+  className="w-full h-auto"
+/>
         </div>
       </div>
     </main>
