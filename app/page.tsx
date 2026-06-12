@@ -119,8 +119,8 @@ if (!assetsLoaded) {
         <Image
           src="/portada/top.png"
           alt=""
-          width={430}
-          height={180}
+          width={300}
+          height={100}
           className="w-full"
           priority
         />
