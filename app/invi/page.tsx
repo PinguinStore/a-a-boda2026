@@ -252,7 +252,55 @@ async function confirmAttendance(attendance: boolean) {
     return () =>
       clearInterval(interval)
   }, [])
-  
+  if (loading) {
+  return (
+    <div
+      className="
+      fixed inset-0
+      bg-[#040B40]
+      flex flex-col
+      items-center
+      justify-center
+      text-white
+      z-[9999]
+      "
+    >
+      {/* Logo */}
+      <h1
+        className="text-7xl text-[#D4AF37] mb-6"
+        style={{ fontFamily: 'Great Vibes' }}
+      >
+        A & A
+      </h1>
+
+      {/* Anillo girando */}
+      <div
+        className="
+        w-16
+        h-16
+        border-4
+        border-[#D4AF37]/30
+        border-t-[#D4AF37]
+        rounded-full
+        animate-spin
+        mb-8
+        "
+      />
+
+      {/* Texto dinámico */}
+      <p
+        className="text-3xl text-center px-6"
+        style={{ fontFamily: 'Parisienne' }}
+      >
+        {loadingText}
+      </p>
+
+      <p className="mt-6 text-sm opacity-70">
+        Estamos preparando una experiencia especial para ti...
+      </p>
+    </div>
+  )
+}
   return (
     <main
 className="
@@ -260,10 +308,10 @@ bg-[#020F3A]
 text-white
 "
 style={{
-backgroundImage:
-"url('/decoracion/textura-fondo.jpg')",
-backgroundSize:'cover',
-backgroundAttachment:'fixed'
+  backgroundImage:
+    "url('/decoracion/texture.jpg')",
+  backgroundRepeat: 'repeat-y',
+  backgroundSize: '100% auto'
 }}
 >
     <section className='relative h-screen' >
@@ -513,12 +561,12 @@ backgroundAttachment:'fixed'
 
     <h3
       style={{ fontFamily: 'Great Vibes' }}
-      className="text-5xl text-white mb-8"
+      className="text-3xl md:text-4xl text-white mb-5"
     >
       Padres del Novio
     </h3>
 
-    <p className="text-white text-2xl leading-relaxed">
+    <p className="text-white text-lg md:text-xl leading-relaxed">
       Ruy Osbaldo Lopez Lozano
     </p>
 
@@ -526,7 +574,7 @@ backgroundAttachment:'fixed'
       &
     </p>
 
-    <p className="text-white text-2xl leading-relaxed">
+    <p className="text-white text-lg md:text-xl leading-relaxed">
       Zulema Sanchez Ortiz
     </p>
 
@@ -544,12 +592,12 @@ backgroundAttachment:'fixed'
 
     <h3
       style={{ fontFamily: 'Great Vibes' }}
-      className="text-5xl text-white mb-8"
+      className="text-3xl md:text-4xl text-white mb-5"
     >
       Padres de la Novia
     </h3>
 
-    <p className="text-white text-2xl leading-relaxed">
+    <p className="text-white text-lg md:text-xl leading-relaxed">
       Hernan Maldonado Bellanos
     </p>
 
@@ -557,7 +605,7 @@ backgroundAttachment:'fixed'
       &
     </p>
 
-    <p className="text-white text-2xl leading-relaxed">
+    <p className="text-white text-lg md:text-xl leading-relaxed">
       Tatiana Siles Alvarado
     </p>
 
@@ -568,7 +616,52 @@ backgroundAttachment:'fixed'
       </span>
       <div className="flex-1 h-[1px] bg-[#D4AF37]" />
     </div>
+{/* Separador */}
+<div className="flex items-center gap-4 my-10">
+  <div className="flex-1 h-[1px] bg-[#D4AF37]" />
+  <span className="text-[#D4AF37] text-2xl">✦</span>
+  <div className="flex-1 h-[1px] bg-[#D4AF37]" />
+</div>
 
+<h3
+  style={{ fontFamily: 'Great Vibes' }}
+  className="text-4xl text-[#D4AF37] mb-4"
+>
+  Padrinos de Civil
+</h3>
+
+<p className="text-lg text-white">
+  Saul Alberto Sanchez Ortiz
+</p>
+
+<p className="text-[#D4AF37] my-2">&</p>
+
+<p className="text-lg text-white">
+  Clara Magda Fernandez Sandoval
+</p>
+
+<div className="flex items-center gap-4 my-10">
+  <div className="flex-1 h-[1px] bg-[#D4AF37]" />
+  <span className="text-[#D4AF37] text-2xl">✦</span>
+  <div className="flex-1 h-[1px] bg-[#D4AF37]" />
+</div>
+
+<h3
+  style={{ fontFamily: 'Great Vibes' }}
+  className="text-4xl text-[#D4AF37] mb-4"
+>
+  Padrinos de Religión
+</h3>
+
+<p className="text-lg text-white">
+  Rolando Maldonado Bellanos
+</p>
+
+<p className="text-[#D4AF37] my-2">&</p>
+
+<p className="text-lg text-white">
+  Rocisela Rojas Lopez
+</p>
   </div>
 
 </div>
@@ -585,11 +678,14 @@ backgroundAttachment:'fixed'
   </h2>
   <div
 className="
-grid
-md:grid-cols-3
-gap-10
-max-w-6xl
-mx-auto
+bg-white/10
+backdrop-blur-md
+rounded-[35px]
+p-8
+border border-[#D4AF37]/30
+shadow-xl
+hover:scale-105
+transition-all
 "
 >
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -1036,26 +1132,39 @@ className="rounded-xl mt-4"
   ))}
 </div>
         <div className='max-w-6xl mx-auto px-6'>
-          <h2 className='text-center text-5xl font-serif mb-16'>
-            Nuestros Momentos
-          </h2>
-          <div
- className="
- flex
- overflow-x-auto
- gap-4
- pb-4
- "
+          <h3
+  className="
+  text-center
+  text-5xl
+  text-[#D4AF37]
+  mb-8
+  "
+  style={{ fontFamily: 'Great Vibes' }}
 >
-            {images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Foto ${index + 1}`}
-                className='w-full h-72 object-cover rounded-[30px] shadow-xl hover:scale-105 transition-all duration-500'
-              />
-            ))}
-          </div>
+  El día que comenzó nuestro para siempre
+</h3>
+          <div className="mt-16 max-w-4xl mx-auto">
+
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="
+    w-full
+    rounded-[40px]
+    shadow-2xl
+    border-2
+    border-[#D4AF37]
+    "
+  >
+    <source
+      src="/videos/nuestra-historia.mp4"
+      type="video/mp4"
+    />
+  </video>
+
+</div>
         </div>
       </section>
       <section className='py-24 bg-white'>
