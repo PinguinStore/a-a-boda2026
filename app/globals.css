@@ -87,3 +87,7 @@ body {
   background-size: 100% auto;
   background-position: center top;
 }
+.blue-glass {
+  background: rgba(4, 11, 64, 0.78);
+  backdrop-filter: blur(3px);
+}

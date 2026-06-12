@@ -310,7 +310,7 @@ text-white
 "
 style={{
   backgroundImage:
-    "url('/decoracion/texture.jpg')",
+    "url('/decoracion/textura.jpg')",
   backgroundRepeat: 'repeat-y',
   backgroundSize: '100% auto'
 }}
@@ -414,10 +414,10 @@ style={{
 
 <motion.section
 initial={{ opacity: 0, y: 100 }}
-whileInView={{ opacity: 1, y: 0 }}
+whileInView={{ opacity: 0.8, y: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 1 }}
-className="wedding-bg py-24"
+className="wedding-bg"
 >
   <section className="py-20 bg-[#F6F1E7] relative overflow-hidden">
 
@@ -515,12 +515,17 @@ className="wedding-bg py-24"
 
 <motion.section
 initial={{ opacity: 0, y: 100 }}
-whileInView={{ opacity: 1, y: 0 }}
+whileInView={{ opacity: 0.8, y: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 1 }}
-className="wedding-bg py-24"
+className="wedding-bg "
 >
-  <section className="relative py-24 bg-[#040B40] overflow-hidden">
+  <section
+className="relative py-24 overflow-hidden"
+style={{
+  backgroundColor: 'rgba(4,11,64,0.78)'
+}}
+>
 
   {/* Decoraciones */}
   <img
@@ -688,12 +693,17 @@ className="wedding-bg py-24"
 
 <motion.section
 initial={{ opacity: 0, y: 100 }}
-whileInView={{ opacity: 1, y: 0 }}
+whileInView={{ opacity: 0.8, y: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 1 }}
-className="wedding-bg py-24"
+className="wedding-bg"
 >
-  <section className="py-4 bg-[#040B40] text-white">
+  <section
+className="py-4 text-white"
+style={{
+  backgroundColor: 'rgba(4,11,64,0.78)'
+}}
+>
   <h2 className="text-center text-5xl mb-16" style={{ fontFamily: 'Great Vibes' }}>
     Ubicaciones
   </h2>
@@ -894,10 +904,10 @@ className="rounded-xl mt-4"
 
 <motion.section
 initial={{ opacity: 0, y: 100 }}
-whileInView={{ opacity: 1, y: 0 }}
+whileInView={{ opacity: 0.8, y: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 1 }}
-className="wedding-bg py-24"
+className="wedding-bg"
 >
   <section className="py-10 bg-[#F6F1E7] relative overflow-hidden">
 
@@ -1024,10 +1034,10 @@ className="wedding-bg py-24"
 
 <motion.section
 initial={{ opacity: 0, y: 100 }}
-whileInView={{ opacity: 1, y: 0 }}
+whileInView={{ opacity: 0.8, y: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 1 }}
-className="wedding-bg py-24"
+className="wedding-bg"
 >
   <section className="relative py-4 bg-[#F5F3EE] overflow-hidden">
 
@@ -1163,12 +1173,17 @@ className="wedding-bg py-24"
 
 <motion.section
 initial={{ opacity: 0, y: 100 }}
-whileInView={{ opacity: 1, y: 0 }}
+whileInView={{ opacity: 0.8, y: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 1 }}
-className="wedding-bg py-24"
+className="wedding-bg"
 >
-        <section className='py-24 bg-[#040B40] text-white relative overflow-hidden'>
+        <section
+className='py-24 text-white relative overflow-hidden'
+style={{
+  backgroundColor: 'rgba(4,11,64,0.78)'
+}}
+>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
   {[...Array(25)].map((_, i) => (
     <span
@@ -1223,10 +1238,10 @@ className="wedding-bg py-24"
 
 <motion.section
 initial={{ opacity: 0, y: 100 }}
-whileInView={{ opacity: 1, y: 0 }}
+whileInView={{ opacity: 0.8, y: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 1 }}
-className="wedding-bg py-24"
+className="wedding-bg"
 >      <section className='py-24 bg-white'>
         <div className='max-w-5xl mx-auto text-center px-6'>
           <h2 className='text-5xl font-serif mb-10 text-[#9AA490]' style={{ fontFamily: 'Great Vibes' }}>
@@ -1255,7 +1270,7 @@ right-6
 bottom-6
 z-40
 
-bg-[#040B40]
+blue-glass
 text-[#F6F1E7]
 
 px-8
@@ -1281,7 +1296,7 @@ animate-bounce
       </button>
       {
         showConfirm && (
-<div className="fixed inset-0 bg-[#040B40]/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+<div className="fixed inset-0 blue-glass/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
 
   <div
     className="
@@ -1566,7 +1581,7 @@ animate-bounce
       className="
         mt-8
         w-full
-        bg-[#040B40]
+        blue-glass
         text-white
         p-4
         rounded-2xl
@@ -1583,10 +1598,10 @@ animate-bounce
       }
 <motion.section
 initial={{ opacity: 0, y: 100 }}
-whileInView={{ opacity: 0.9, y: 0 }}
+whileInView={{ opacity: 0.8, y: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 1 }}
-className="wedding-bg py-24"
+className="wedding-bg"
 >
   <footer
 className="
