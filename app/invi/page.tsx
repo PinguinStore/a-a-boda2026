@@ -765,6 +765,9 @@ justify-center
 <h3 className="text-4xl mt-4">
 10:00
 </h3>
+  <p className="text-lg text-[#D4AF37] font-semibold mt-2">
+    Salón de Eventos Colonial
+  </p>
 
 <p>Boda Civil</p>
 <iframe
@@ -798,6 +801,10 @@ justify-center
 14:30
 </h3>
 
+  <p className="text-lg text-[#D4AF37] font-semibold mt-2">
+    Iglesia San Gerardo
+  </p>
+
 <p>Boda Religiosa
 </p>
 <iframe
@@ -830,7 +837,10 @@ justify-center
 <h3 className="text-4xl mt-4">
 16:00
 </h3>
-
+  <p className="text-lg text-[#D4AF37] font-semibold mt-2">
+    Salón de Eventos Colonial
+  </p>
+  
 <p>Fiesta</p>
 <iframe
 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.3007526541614!2d-67.1066688!3d-17.964739299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e2b118fd1078c1%3A0xb73c99c68f938a6f!2sSal%C3%B3n%20de%20Eventos%20%22Colonial%22!5e0!3m2!1ses-419!2sbo!4v1780708783308!5m2!1ses-419!2sbo"
