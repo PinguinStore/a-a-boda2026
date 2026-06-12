@@ -80,3 +80,10 @@ body {
 .loader-heart {
   animation: pulseGold 2s infinite;
 }
+.wedding-bg {
+  background-color: #040B40;
+  background-image: url('/decoracion/textura-fondo.jpg');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: center top;
+}

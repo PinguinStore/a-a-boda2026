@@ -1,6 +1,7 @@
 'use client'
 import { supabase } from '@/src/lib/supabase'
 import { useEffect, useState, useRef } from 'react'
+import { motion } from 'framer-motion'
 <link
 href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
 rel="stylesheet"
@@ -410,7 +411,15 @@ style={{
 </div>
         </div>
       </section>
-<section className="py-20 bg-[#F6F1E7] relative overflow-hidden">
+
+<motion.section
+initial={{ opacity: 0, y: 100 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 1 }}
+className="wedding-bg py-24"
+>
+  <section className="py-20 bg-[#F6F1E7] relative overflow-hidden">
 
 
   {/* Decoración derecha */}
@@ -501,9 +510,17 @@ style={{
     </div>
   </div>
 </section>
+</motion.section>
 
 
-<section className="relative py-24 bg-[#040B40] overflow-hidden">
+<motion.section
+initial={{ opacity: 0, y: 100 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 1 }}
+className="wedding-bg py-24"
+>
+  <section className="relative py-24 bg-[#040B40] overflow-hidden">
 
   {/* Decoraciones */}
   <img
@@ -666,13 +683,17 @@ style={{
 
 </div>
 </section>
+</motion.section>
 
 
-
-
-
-
-<section className="py-4 bg-[#040B40] text-white">
+<motion.section
+initial={{ opacity: 0, y: 100 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 1 }}
+className="wedding-bg py-24"
+>
+  <section className="py-4 bg-[#040B40] text-white">
   <h2 className="text-center text-5xl mb-16" style={{ fontFamily: 'Great Vibes' }}>
     Ubicaciones
   </h2>
@@ -868,7 +889,17 @@ className="rounded-xl mt-4"
 
 </section>
 </section>
-<section className="py-10 bg-[#F6F1E7] relative overflow-hidden">
+</motion.section>
+
+
+<motion.section
+initial={{ opacity: 0, y: 100 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 1 }}
+className="wedding-bg py-24"
+>
+  <section className="py-10 bg-[#F6F1E7] relative overflow-hidden">
 
   {/* Decoraciones */}
   <img
@@ -988,7 +1019,17 @@ className="rounded-xl mt-4"
   </div>
 
 </section>
-<section className="relative py-4 bg-[#F5F3EE] overflow-hidden">
+</motion.section>
+
+
+<motion.section
+initial={{ opacity: 0, y: 100 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 1 }}
+className="wedding-bg py-24"
+>
+  <section className="relative py-4 bg-[#F5F3EE] overflow-hidden">
 
   {/* DECORACIONES */}
   <img
@@ -1117,7 +1158,17 @@ className="rounded-xl mt-4"
 
   </div>
 </section>
-      <section className='py-24 bg-[#040B40] text-white relative overflow-hidden'>
+</motion.section>
+
+
+<motion.section
+initial={{ opacity: 0, y: 100 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 1 }}
+className="wedding-bg py-24"
+>
+        <section className='py-24 bg-[#040B40] text-white relative overflow-hidden'>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
   {[...Array(25)].map((_, i) => (
     <span
@@ -1167,7 +1218,16 @@ className="rounded-xl mt-4"
 </div>
         </div>
       </section>
-      <section className='py-24 bg-white'>
+</motion.section>
+
+
+<motion.section
+initial={{ opacity: 0, y: 100 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 1 }}
+className="wedding-bg py-24"
+>      <section className='py-24 bg-white'>
         <div className='max-w-5xl mx-auto text-center px-6'>
           <h2 className='text-5xl font-serif mb-10 text-[#9AA490]' style={{ fontFamily: 'Great Vibes' }}>
             Un Versículo Especial
@@ -1183,9 +1243,39 @@ className="rounded-xl mt-4"
           </div>
         </div>
       </section>
+      </motion.section>
+
+
+
       <button
         onClick={() => setShowConfirm(true)}
-        className='fixed right-6 bottom-6 z-40 bg-[#040B40] text-white px-8 py-4 rounded-full shadow-2xl animate-bounce hover:scale-105 transition-all'
+        className="
+fixed
+right-6
+bottom-6
+z-40
+
+bg-[#040B40]
+text-[#F6F1E7]
+
+px-8
+py-4
+
+rounded-full
+
+border-2
+border-[#D4AF37]
+
+shadow-[0_0_25px_rgba(212,175,55,.35)]
+
+hover:bg-[#0A1E73]
+hover:scale-105
+
+transition-all
+duration-500
+
+animate-bounce
+"
       >
         Confirmar Asistencia
       </button>
@@ -1491,9 +1581,15 @@ className="rounded-xl mt-4"
 </div>
         )
       }
-<footer
+<motion.section
+initial={{ opacity: 0, y: 100 }}
+whileInView={{ opacity: 0.9, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 1 }}
+className="wedding-bg py-24"
+>
+  <footer
 className="
-bg-[#040B40]
 text-white
 py-20
 text-center
@@ -1516,6 +1612,8 @@ A & A
 Oruro - Bolivia
 </p>
 </footer>
+</motion.section>
+
     </main>
   )
 }
