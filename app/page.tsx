@@ -18,6 +18,38 @@ const frames = [
   "/invitacion/invi_5.png",
   "/invitacion/invi_6.png",
 ];
+useEffect(() => {
+  const preloadImages = async () => {
+    const allImages = [
+      "/portada/top.png",
+      "/portada/left.png",
+      "/portada/right.png",
+      "/portada/bottom.png",
+      "/portada/monograma.png",
+      "/portada/sobre.png",
+      ...frames
+    ];
+
+    const promises = allImages.map((src) => {
+      return new Promise((resolve) => {
+        const img = new window.Image();
+        img.src = src;
+        img.onload = resolve;
+        img.onerror = resolve;
+      });
+    });
+
+    await Promise.all(promises);
+
+    setTimeout(() => {
+      setAssetsLoaded(true);
+    }, 500);
+  };
+
+  preloadImages();
+}, []);
+const [assetsLoaded, setAssetsLoaded] = useState(false);
+const [loadingText, setLoadingText] = useState("Preparando invitación...");
 const abrirInvitacion = () => {
   if (opening) return;
 
@@ -44,6 +76,41 @@ useEffect(() => {
 
   return () => clearInterval(interval);
 }, [opening, router]);
+if (!assetsLoaded) {
+  return (
+    <div className="fixed inset-0 bg-white flex flex-col items-center justify-center">
+      
+      <div className="text-center">
+        
+        <h1
+          className="text-6xl text-[#927e61] mb-6"
+          style={{ fontFamily: "Great Vibes" }}
+        >
+          A & A
+        </h1>
+
+        <div
+          className="
+          w-14 h-14
+          border-4
+          border-[#d8c5a6]
+          border-t-[#927e61]
+          rounded-full
+          animate-spin
+          mx-auto
+          mb-6
+          "
+        />
+
+        <p className="text-[#927e61] tracking-[2px]">
+          Preparando tu invitación...
+        </p>
+
+      </div>
+
+    </div>
+  );
+}
   return (
     <main className="bg-white min-h-screen flex justify-center">
       <div className="relative w-full max-w-[430px] bg-white overflow-hidden">

@@ -83,7 +83,18 @@ useEffect(() => {
     audioRef.current = null
   }
 }, [])
+useEffect(() => {
+  let timer: NodeJS.Timeout
 
+  timer = setInterval(() => {
+    window.scrollBy({
+      top: 1,
+      behavior: 'auto'
+    })
+  }, 10)
+
+  return () => clearInterval(timer)
+}, [])
 useEffect(() => {
   audioRef.current = new Audio('/music/music.mp3')
   audioRef.current.loop = true
