@@ -23,7 +23,7 @@ useEffect(() => {
     const allImages = [
       "/portada/top.png",
       "/portada/left.png",
-      "/portada/right.png",
+      "/portada/right.jpg",
       "/portada/bottom.png",
       "/portada/monograma.png",
       "/portada/sobre.png",
@@ -135,7 +135,7 @@ if (!assetsLoaded) {
         />
 
         <Image
-          src="/portada/right.png"
+          src="/portada/right.jpg"
           alt=""
           width={120}
           height={300}
