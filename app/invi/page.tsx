@@ -1264,7 +1264,7 @@ transition={{ duration: 1 }}
 className="wedding-bg"
 >      <section className='py-24 bg-white'>
         <div className='max-w-5xl mx-auto text-center px-6'>
-          <h2 className='text-5xl font-serif mb-10 text-[#9AA490]' style={{ fontFamily: 'Great Vibes' }}>
+          <h2 className='text-5xl font-serif mb-10 text-[#D4AF37]' style={{ fontFamily: 'Great Vibes' }}>
             Un Versículo Especial
           </h2>
           <div className='bg-[#D6D0BC] rounded-[40px] p-12 shadow-xl' style={{ fontFamily: 'Great Vibes' }}>
@@ -1272,7 +1272,7 @@ className="wedding-bg"
               "Y sobre todas estas cosas vestíos de amor,
               que es el vínculo perfecto."
             </p>
-            <p className='mt-8 text-2xl font-bold text-[#9AA490]'>
+            <p className='mt-8 text-2xl font-bold text-[#D4AF37]'>
               Colosenses 3:14
             </p>
           </div>
