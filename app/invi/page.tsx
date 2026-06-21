@@ -875,7 +875,7 @@ className="rounded-xl mt-4"
   <div className="max-w-5xl mx-auto px-4">
 
     <img
-      src="/imagenes/itinerario.png"
+      src="/imagenes/itinerario1.png"
       alt="Itinerario"
       className="w-full rounded-[30px] shadow-2xl"
     />
