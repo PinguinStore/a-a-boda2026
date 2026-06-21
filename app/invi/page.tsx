@@ -1000,7 +1000,7 @@ className="wedding-bg"
         <img
           src="/imagenes/mujer-formal1.png"
           alt="Mujer"
-          className="w-24 md:w-32 mx-auto"
+          className="w-45 md:w-32 mx-auto"
         />
 
         <h4 className="text-3xl font-bold mt-4 text-[#040B40]" style={{
