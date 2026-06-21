@@ -1156,22 +1156,19 @@ className="wedding-bg"
   </div>
 {/* FOTOS */}
   <div className="bg-white rounded-[30px] p-8 shadow-lg">
-    <img
-      src="/imagenes/regalo1.png"
-      className="w-16 mx-auto mb-4"
-    />
+
     <h3
       style={{ fontFamily: 'Great Vibes' }}
       className="
       text-5xl
-      text-[#9AA490]
+      text-[#253557]
       mb-4
       "
     >
       Regalo digital
     </h3>
 
-    <p className="text-lg mb-6 font-serif text-[#9AA490]">
+    <p className="text-lg mb-6 font-serif text-[#253557]">
       Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle con nosotros, puedes hacerlo escaneando el siguiente código QR.
     </p>
       <img
