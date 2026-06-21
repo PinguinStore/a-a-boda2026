@@ -129,7 +129,7 @@ if (!assetsLoaded) {
 
         {/* FLORES LATERALES */}
         <Image
-          src="/portada/left.png"
+          src="/portada/left1.png"
           alt=""
           width={120}
           height={300}
