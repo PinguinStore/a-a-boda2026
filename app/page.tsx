@@ -84,7 +84,11 @@ if (!assetsLoaded) {
         
         <h1
           className="text-6xl text-[#927e61] mb-6"
-          style={{ fontFamily: "Great Vibes" }}
+                style={{
+    fontFamily: 'var(--font-ephesis)',
+    fontSize: '5rem',
+    color: '#D4AF37',
+  }}
         >
           A & A
         </h1>

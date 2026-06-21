@@ -280,7 +280,11 @@ async function confirmAttendance(attendance: boolean) {
       {/* Logo */}
       <h1
         className="text-7xl text-[#D4AF37] mb-6"
-        style={{ fontFamily: 'Great Vibes' }}
+              style={{
+    fontFamily: 'var(--font-ephesis)',
+    fontSize: '5rem',
+    color: '#D4AF37',
+  }}
       >
         A & A
       </h1>
@@ -384,7 +388,7 @@ style={{
   </h2>
 
   <p className="mt-6 text-lg md:text-2xl"style={{ fontFamily: 'Great Vibes' }}>
-    01 DE AGOSTO DE 2026
+    01 de ogosto de 2026
   </p>
 
   <p className="text-sm md:text-lg"style={{ fontFamily: 'Great Vibes' }}
@@ -393,7 +397,7 @@ style={{
   </p>
 <div className="mt-8 bg-black/30 backdrop-blur-md rounded-2xl p-6 w-full max-w-md">
 
-  <p className="text-lg mb-4" style={{ fontFamily: 'Great Vibes' }}
+  <p className="tracking-[8px] uppercase text-sm mb-4"
 >FALTAN</p>
 
   <div className="grid grid-cols-4 text-center gap-2">
@@ -1171,17 +1175,27 @@ className="wedding-bg"
     <p className="text-lg mb-6 font-serif text-[#253557]">
       Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle con nosotros, puedes hacerlo escaneando el siguiente código QR.
     </p>
-      <img
-        src="/imagenes/qr-cuenta.png"
-        alt="QR Fotos"
-        className="
-        w-40
-        mx-auto
-        hover:scale-105
-        transition-all
-        "
-      />
+<a
+  href="/imagenes/QR_Boda_Adriana_Aldair.jpeg"
+  download="QR_BodaAdri&Alda.jpeg"
+  className="block"
+>
+  <img
+    src="/imagenes/qr-cuenta.png"
+    alt="QR Regalo"
+    className="
+      w-40
+      mx-auto
+      hover:scale-105
+      transition-all
+      cursor-pointer
+    "
+  />
+</a>
 
+<p className="mt-2 text-xs text-[#253557]">
+  Haz clic en el QR para descargarlo
+</p>
     <p className="mt-4 text-sm text-gray-500">
       MUCHAS GRACIAS 
     </p>
