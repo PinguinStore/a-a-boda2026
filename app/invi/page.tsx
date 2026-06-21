@@ -364,7 +364,11 @@ style={{
 
   <h1
     className="text-6xl md:text-8xl text-[#D4AF37]"
-    style={{ fontFamily: 'Great Vibes' }}
+      style={{
+    fontFamily: 'var(--font-ephesis)',
+    fontSize: '5rem',
+    color: '#D4AF37',
+  }}
   >
     A & A
   </h1>
@@ -379,22 +383,18 @@ style={{
     Aldair Osvaldo Lopez Sanchez
   </h2>
 
-  <p className="mt-6 text-lg md:text-2xl" style={{
-  fontFamily: 'Parisienne'
-}}>
+  <p className="mt-6 text-lg md:text-2xl"style={{ fontFamily: 'Great Vibes' }}>
     01 DE AGOSTO DE 2026
   </p>
 
-  <p className="text-sm md:text-lg" style={{
-  fontFamily: 'Parisienne'
-}}>
+  <p className="text-sm md:text-lg"style={{ fontFamily: 'Great Vibes' }}
+>
     Oruro - Bolivia
   </p>
 <div className="mt-8 bg-black/30 backdrop-blur-md rounded-2xl p-6 w-full max-w-md">
 
-  <p className="text-lg mb-4" style={{
-  fontFamily: 'Parisienne'
-}}>FALTAN</p>
+  <p className="text-lg mb-4" style={{ fontFamily: 'Great Vibes' }}
+>FALTAN</p>
 
   <div className="grid grid-cols-4 text-center gap-2">
 
@@ -496,7 +496,7 @@ className="wedding-bg"
           </p>
 
           <p
-            className="mt-8 text-2xl md:text-4xl text-[#6E8068]"
+            className="mt-8 text-2xl md:text-4xl text-[#D4AF37]"
             style={{ fontFamily: 'Great Vibes' }}
           >
             ¡Te invitamos a ser parte de este nuevo capítulo!
@@ -975,7 +975,7 @@ className="wedding-bg"
   ))}
 </div>
     <h2
-      className="text-5xl md:text-7xl text-[#8A9573]"
+      className="text-5xl md:text-7xl text-[#D4AF37]"
       style={{ fontFamily: 'Great Vibes' }}
     >
       Código de vestimenta

@@ -40,3 +40,24 @@ export default function RootLayout({
     </html>
   );
 }
+import { Ephesis } from 'next/font/google'
+
+const ephesis = Ephesis({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-ephesis',
+})
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="es">
+      <body className={ephesis.variable}>
+        {children}
+      </body>
+    </html>
+  )
+}
