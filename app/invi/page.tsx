@@ -1491,7 +1491,7 @@ animate-bounce
       <div className="text-center">
 
         <h3
-          style={{ fontFamily: 'Great Vibes' }}
+
           className="text-4xl text-[#040B40]"
         >
           {selectedGuest.nombre}
