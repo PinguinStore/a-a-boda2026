@@ -181,9 +181,12 @@ async function confirmAttendance(attendance: boolean) {
     return
   }
 
-  const phone = '59169580486'
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
-  window.open(url, '_blank')
+  const phone =
+  mode === 'novio'
+    ? '59169580486'
+    : '59168065549'
+const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
+window.open(url, '_blank')
 
   setShowConfirm(false)
 }
