@@ -22,7 +22,7 @@ useEffect(() => {
   const preloadImages = async () => {
     const allImages = [
       "/portada/top.png",
-      "/portada/left.png",
+      "/portada/left1.png",
       "/portada/right1.png",
       "/portada/bottom.png",
       "/portada/monograma.png",
