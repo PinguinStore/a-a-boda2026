@@ -151,7 +151,7 @@ if (!assetsLoaded) {
   flex-col
   items-center
   justify-center
-  min-h-[40vh]
+  min-h-[20vh]
   px-4
   "
 >
