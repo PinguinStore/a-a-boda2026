@@ -1027,7 +1027,7 @@ className="wedding-bg"
 }}>
 
         <img
-          src="/imagenes/hombre-formal1.png"
+          src="/imagenes/hombre-formal2.png"
           alt="Hombre"
           className="w-24 md:w-32 mx-auto"
         />
