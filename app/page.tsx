@@ -21,7 +21,7 @@ const frames = [
 useEffect(() => {
   const preloadImages = async () => {
     const allImages = [
-      "/portada/top.png",
+      "/portada/top1.png",
       "/portada/left1.png",
       "/portada/right1.png",
       "/portada/bottom.png",
@@ -120,7 +120,7 @@ if (!assetsLoaded) {
   <div className="relative w-full min-h-[100dvh] bg-white overflow-hidden">
         {/* FLORES SUPERIORES */}
 <Image
-  src="/portada/top.png"
+  src="/portada/top1.png"
   alt=""
   width={800}
   height={250}
