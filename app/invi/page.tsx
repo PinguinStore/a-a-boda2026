@@ -1110,7 +1110,7 @@ className="wedding-bg"
       className="
       text-6xl
       md:text-8xl
-      text-[#9AA490]
+      text-[#253557]
       mb-10
       "
     >
@@ -1136,7 +1136,7 @@ className="wedding-bg"
         target="_blank"
         className="
         inline-block
-        bg-[#9AA490]
+        bg-[#486094]
         text-white
         px-10
         py-4
