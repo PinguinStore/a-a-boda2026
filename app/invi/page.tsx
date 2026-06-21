@@ -1029,7 +1029,7 @@ className="wedding-bg"
         <img
           src="/imagenes/hombre-formal2.png"
           alt="Hombre"
-          className="w-24 md:w-32 mx-auto"
+          className="w-45 md:w-32 mx-auto"
         />
 
         <h4 className="text-3xl font-bold mt-4 text-[#040B40]">
@@ -1037,13 +1037,15 @@ className="wedding-bg"
         </h4>
 
         <p className="text-2xl font-semibold mt-2 text-gray-700">
-          Traje
-        </p>
-
-        <p className="mt-4 text-lg text-gray-700">
           Traje formal oscuro
         </p>
 
+        <p className="mt-4 text-lg text-gray-700">
+          Deja el blanco para el novio
+        </p>
+        <p className="mt-4 text-lg text-gray-700">
+          Y el plomo para los padrinos
+        </p>
       </div>
 
     </div>
